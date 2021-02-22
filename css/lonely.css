@@ -1,0 +1,452 @@
+html, body{
+	font-family: 'Courier New', monospace;
+	font-style: normal;
+	font-weight: 500;
+	/*background-color: black;*/
+	color: white;
+
+ 	margin:0px;
+	/*display: grid;*/
+  	/*align-items: center;*/
+  	/*grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+  	/*grid-template-columns: repeat(12, 1fr);
+  	grid-column-gap: 20px;
+  	grid-template-rows: repeat(2, 1fr);*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: termina,sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-shadow: 1px black;
+}
+
+a, h1, h2, p{
+	text-shadow: 1px 1px 2px black;
+}
+h3{
+	text-shadow: -1px -1px 2px black;
+}
+a {
+	color:rgb(150,150,150);
+	text-decoration: none;
+}
+
+a:hover{
+	color: white;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.header, .header h1, h2, h3, h4, h5, h6{
+	margin:0px;
+}
+.header{
+	display: block;
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	text-align: left;
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+	z-index: 2;
+}
+
+/*background fog*/
+.bg_fog-left{
+	position: fixed;
+	top:0;
+	left:0;
+	width:150px;
+	height:100vh;
+	margin: 0px;
+	background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+	/*box-shadow: inset 0 0 5em 5em #000;*/
+	z-index: 1;
+}
+.bg_fog-top{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100px;
+	margin: 0px;
+	background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+	/*box-shadow: inset 0 0 5em 5em #000;*/
+	z-index: 1;
+}
+.bg_fog-right{
+	position: fixed;
+	top:0;
+	right:0;
+	width:150px;
+	height:100vh;
+	margin: 0px;
+	background-image: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+	/*box-shadow: inset 0 0 5em 5em #000;*/
+	z-index: 1;
+}
+.bg_fog-bottom{
+	position: fixed;
+	bottom:0;
+	left:0;
+	width:100vw;
+	height:200px;
+	margin: 0px;
+	background-image: linear-gradient(360deg,rgba(0,0,0,1), rgba(0,0,0,0));
+	/*box-shadow: inset 0 0 5em 5em #000;*/
+	z-index: 1;
+}
+
+/*nav tab*/
+/*the burger is the navigation menu*/
+/*this is the absolute width of the burger*/
+.burger {
+	width: 20px;
+	display:block;
+}
+/*this is the settings for the three lines (divs)*/
+.burger div{
+	height: 2px;
+	background-color: white;
+	margin: 4px 0;
+	transition: 0.3s;
+	box-shadow: 1px 1px 0 black;
+}
+/*this is the top line*/
+.burger .one{
+	width: 20px;
+}
+/*this is the mid line*/
+.burger .two{
+	width: 10px;
+}
+/*this is the bottom line*/
+.burger .three{
+	width: 15px;
+}
+/*this changes the width of the lines to 20px when hover*/
+.burger:hover div{
+	width:20px;
+}
+/*this hides the sub-nav in the burger menu*/
+input, ul.sub-nav {
+  	display: none;
+}
+/*this places the burger on the top-left of the grid*/
+label {
+  	position: relative;
+  	display: block;
+  	cursor: pointer;
+	margin-bottom: 20px;
+}
+/*this show the sub-nav when the burger is clicked (when the input is checked)d*/
+input:checked~ul.sub-nav {
+  display: block;
+
+}
+/*this is the absolute width of the navtab*/
+.navtab {
+	position: fixed;
+	padding: 50px;
+	width: 150px;
+	height: 1fr;
+	z-index: 10;
+
+}
+/*this is the settings for the sub-nav*/
+.navtab ul {
+	grid-column-start: 1;
+  	grid-column-end: 1 span;
+
+ 	list-style-type: none;
+ 	margin: 5px 0;
+  	padding: 0;
+
+  	font-family: termina,sans-serif;
+  	font-weight: 700;
+	font-style: normal;
+}
+/*landing page*/
+.intro{
+  	grid-column-start: 4;
+  	grid-column-end: 5 span;
+  	padding-top:200px;
+
+  	text-align: center;
+  	color:rgb(150,150,150);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*gallery page*/
+body#gallery, #intro{
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+}
+#gallery button{
+	position: fixed;
+	bottom: 60vh;
+	left: 55px;
+	z-index: 5;
+
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: black;
+
+	color:white;
+	text-align: center;
+}
+.submit{
+	position: absolute;
+	top: 50px;
+	right: 0;
+	text-align: right;
+	z-index: 9;
+}
+				    #opacity-cover{
+				      position:fixed;
+				      top:0;
+				      left:0;
+				      background:rgba(0,0,0,0.6);
+				      z-index:5;
+				      width:100%;
+				      height:100%;
+				      display:none;
+				    }
+				    #submit-consent
+				    {
+				      height:50vh;
+				      width:40vw;
+				      margin:0 auto;
+				      position:absolute;
+				      left:30vw;
+				      z-index:10;
+				      display:none;
+				      background: rgba(0,0,0,0.8);
+				      border:1px solid #FFFF;
+
+				      overflow-y: auto;
+				    }
+				    #submit-consent h2, p {
+				    	padding: 20px 25px 0 25px;
+				    	margin: 0;
+				    }
+				    #submit-consent p {
+				    	font-size: 0.9em;
+				    }
+				    #submit-consent:target, #submit-consent:target + #opacity-cover{
+				      display:block;
+				      opacity:2;
+				    }
+				    .cancel
+				    {
+				      display:block;
+				      position:absolute;
+				      top:3px;
+				      right:2px;
+				      padding: 10px 25px 0 25px;
+				      color: #f1f1f1;
+				      font-size:40px;
+				      text-decoration:none;
+				      text-align:center;
+				      font-weight:thin;
+					  transition: 0.3s;
+				    }
+				    .cancel:hover,
+					.cancel:focus {
+					  color: #bbb;
+					  text-decoration: none;
+					  cursor: pointer;
+					}
+/*draggable items*/
+.drag{
+	position:absolute;
+	top:100;
+	left:0;
+	z-index: -99;
+
+	cursor: move;
+}
+.galleryGrid {
+	display: grid;
+  	align-items: center;
+  	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  	grid-template-columns: repeat(4, 1fr);
+  	grid-column-gap: 20px;
+  	grid-template-rows: repeat(4, 1fr);
+  	grid-row-gap: 20px;
+}
+.galleryGrid img#one {
+	animation: images1 10s infinite;
+}
+@keyframes images1 {
+	50% {transform:translateX(20px);}
+}
+.galleryGrid img#two {
+	animation: images2 15s infinite;
+}
+@keyframes images2 {
+	50% {transform:translateY(20px);}
+}
+.galleryGrid img#three {
+	animation: images3 5s infinite;
+}
+@keyframes images3 {
+	50% {transform:translateX(-10px);}
+}
+.galleryGrid img#four {
+	animation: images4 15s infinite;
+}
+@keyframes images4 {
+	50% {transform:translateY(-10px);}
+}
+
+/*===================IMAGE====================*/
+
+/*Code used to create Modal Images is adapted from 
+https://www.w3schools.com/howto/howto_css_modal_images.asp*/
+
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+  transition: 0.3s 1;
+}
+.myImg:hover {opacity: 0.7;transform:scale(1.1);}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px;  /*Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+	overflow: hidden;
+  margin: auto;
+  display: block;
+  max-height: 70%;
+  max-width: 70%;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 100px;
+  right: 175px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: thin;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 500px){
+  .modal-content {
+    width: 100vw;
+  }
+}
+
+
+
+
+
+
+/*about&process page*/
+.title{
+	position: fixed;
+	margin: 0 !important;
+	bottom:10px;
+	left: 100px;
+	font-size: 5em;
+	z-index: 1;
+
+	color: black !important;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
+}
+
+.about{
+	position: relative;
+	margin: 0;
+	padding: 100px 0 20vh 25vw;
+	/*z-index: 1;*/
+	font-size: 1.25em;
+}
+.about h2{
+	padding: 0 0 0 10vw !important;
+	text-align: right;
+}
+.about p {
+	padding: 0 300px 0 0;
+}
+.about-photos{
+	padding: 100px 0 0 0;
+	display: grid;
+	/*z-index: 0;*/
+  	align-items: center;
+  	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  	grid-template-columns: repeat(4, 1fr);
+  	grid-column-gap: 20px;
+  	grid-template-rows: repeat(2, 1fr);
+  	grid-row-gap: 20px;
+}
+
+/*drawing page*/
+body #drawing{
+	background-color: black;
+}
+.drawing{
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: -99;
+	height:100%;
+	width: 100%;
+	border:none;
+}
