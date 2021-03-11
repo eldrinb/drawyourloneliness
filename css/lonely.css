@@ -169,17 +169,79 @@ input:checked~ul.sub-nav {
 }
 /*landing page*/
 .intro{
-  	grid-column-start: 4;
-  	grid-column-end: 5 span;
-  	padding-top:200px;
+  	position: absolute;
+	margin: 0 !important;
+	bottom:40vh;
+	left: 40vh;
+	text-align: center;
 
-  	text-align: center;
   	color:rgb(150,150,150);
 }
+.intro h1{
+	font-size: 4em;
+	/*text-align: left !important;*/
 
+	color: black !important;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
+}
+.shape-one{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 25vw;
+	top:0vh;
+	border-radius: 50%;
+	z-index: -1;
+	animation: intro-colour 5s infinite, intro-rotate 2.5s infinite, intro-scale 2.5s infinite;
+}
+			@keyframes intro-colour {
+				0% {background-color: red;}
+				20% {background-color: yellow;}
+				40% {background-color: green;}
+				60% {background-color: blue;}
+				80% {background-color: purple;}
+				100% {background-color: red;}
+			}
+			/*@keyframes intro-rotate {
+				100% {
+					transform: rotate(360deg);
+					transform-origin: top left;
+				}
+			}*/
+			@keyframes intro-scale {
+				50% {transform: scale(2);}
+			}
 
-
-
+.shape-two{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 25vw;
+	top:0vh;
+	z-index: -2;
+	animation: intro-colour 5s infinite, intro-rotate 5s infinite, intro-scale 5s infinite;
+}
+			@keyframes intro-colour {
+				0% {background-color: red;}
+				20% {background-color: yellow;}
+				40% {background-color: green;}
+				60% {background-color: blue;}
+				80% {background-color: purple;}
+				100% {background-color: red;}
+			}
+			/*@keyframes intro-rotate {
+				100% {
+					transform: rotate(360deg);
+					transform-origin: top left;
+				}
+			}*/
+			@keyframes intro-scale {
+				50% {transform: scale(3);}
+			}
 
 
 
@@ -227,9 +289,9 @@ body#gallery, #intro{
 				    }
 				    #submit-consent
 				    {
-				      height:50vh;
+				      height:60vh;
 				      width:40vw;
-				      margin:0 auto;
+				      margin:50px 0 0 0;
 				      position:absolute;
 				      left:30vw;
 				      z-index:10;
@@ -240,7 +302,7 @@ body#gallery, #intro{
 				      overflow-y: auto;
 				    }
 				    #submit-consent h2, p {
-				    	padding: 20px 25px 0 25px;
+				    	padding: 20px 25px 20px 25px;
 				    	margin: 0;
 				    }
 				    #submit-consent p {
@@ -336,6 +398,8 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+
+  cursor: pointer;
 }
 /* Modal Content (Image) */
 .modal-content {
@@ -344,6 +408,7 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
   display: block;
   max-height: 70%;
   max-width: 70%;
+
 }
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
@@ -440,6 +505,24 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
 body #drawing{
 	background-color: black;
 }
+body#draw{
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+}
+/*#draw .submit{
+	display: block;
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	width:30px;
+	text-align: left;
+	transform: rotate(180deg);
+	writing-mode: vertical-rl;
+	z-index: 2;
+}*/
 .drawing{
 	display: block;
 	position: absolute;
