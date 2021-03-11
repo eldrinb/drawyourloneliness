@@ -47,7 +47,7 @@ window.onload = function(){
 
 		}
 
-		var span = document.getElementsByClassName("close")[0];
+		var span = document.getElementsByClassName("close" && "modal")[0];
 
 		span.onclick = function() {
 		  modal.style.display = "none";
@@ -61,11 +61,4 @@ window.onload = function(){
 	$(".warning").click(function(){
 		alert("Double-click the drawings to view in more detail.");
 	});
-
-	
-
-	// ===================GALLERY====================
-	// $(".sve").click(function(){
-	// 	alert("");
-	// });
 }
