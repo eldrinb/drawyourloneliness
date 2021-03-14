@@ -512,6 +512,19 @@ body#draw{
 	height: 100vh;
 	background-color: black;
 }
+#draw button{
+	position: fixed;
+	top: 75px;
+	left: 710px;
+	z-index: 5;
+
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: black;
+
+	color:white;
+	text-align: center;
+}
 /*#draw .submit{
 	display: block;
 	position: fixed;
