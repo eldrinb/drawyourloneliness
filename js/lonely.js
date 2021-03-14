@@ -1,7 +1,20 @@
-console.log("hellp")
+
+console.log("help");
 
 // for the gallery
 window.onload = function(){
+	// ===================GALLERY====================
+	// alert that tells visitor to double-click image if they want to view the drawings in detail
+	$(".warning").click(function(){
+		alert("Double-click the drawings to view in more detail.");
+	});
+
+	// ===================DRAW====================
+	// alert that tells visitor that pressing the save button 
+	$(".save").click(function(){
+		alert("When you choose to save your drawing, it only saves it to your desktop. If you'd like to submit your drawing, please take a look at 'Want to Submit?'");
+	});	
+	
 	$(".drag").draggable();
 	//this is solely to make the images randomized on load.
 	//code sourced from https://www.sitepoint.com/community/t/change-order-of-images-on-page-load/288098/6 by Paul Wilkins.
@@ -53,12 +66,4 @@ window.onload = function(){
 		  modal.style.display = "none";
 		}
 	
-
-
-	// ===================GALLERY====================
-	// alert that tells visitor to double-click image if they want to view the drawings in detail
-	// alert("Double-click the drawings to view in more detail.");
-	$(".warning").click(function(){
-		alert("Double-click the drawings to view in more detail.");
-	});
 }
