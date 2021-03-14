@@ -9,7 +9,7 @@ var canvas;
 //   resizeCanvas(windowWidth, windowHeight);
 // }
 function setup() {
-  frameRate(4);
+  frameRate(6);
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style('z-index','-1');
