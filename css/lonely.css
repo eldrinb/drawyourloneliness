@@ -148,11 +148,13 @@ input:checked~ul.sub-nav {
 /*this is the absolute width of the navtab*/
 .navtab {
 	position: fixed;
-	padding: 50px;
-	width: 150px;
+	padding: 50px 0 0 50px;
+	width: 100px;
 	height: 1fr;
 	z-index: 10;
-
+}
+#draw .navtab {
+	padding: 110px 0 0 50px;
 }
 /*this is the settings for the sub-nav*/
 .navtab ul {
@@ -188,7 +190,7 @@ input:checked~ul.sub-nav {
 		-1px 1px 0 #FFF,
 		1px 1px 0 #FFF;
 }
-.shape-one{
+/*.shape-one{
 	position: absolute;
 	width: 100px;
 	height: 100px;
@@ -197,26 +199,26 @@ input:checked~ul.sub-nav {
 	border-radius: 50%;
 	z-index: -1;
 	animation: intro-colour 5s infinite, intro-rotate 2.5s infinite, intro-scale 2.5s infinite;
-}
-			@keyframes intro-colour {
+}*/
+			/*@keyframes intro-colour {
 				0% {background-color: red;}
 				20% {background-color: yellow;}
 				40% {background-color: green;}
 				60% {background-color: blue;}
 				80% {background-color: purple;}
 				100% {background-color: red;}
-			}
+			}*/
 			/*@keyframes intro-rotate {
 				100% {
 					transform: rotate(360deg);
 					transform-origin: top left;
 				}
 			}*/
-			@keyframes intro-scale {
+			/*@keyframes intro-scale {
 				50% {transform: scale(2);}
-			}
+			}*/
 
-.shape-two{
+/*.shape-two{
 	position: absolute;
 	width: 100px;
 	height: 100px;
@@ -224,25 +226,25 @@ input:checked~ul.sub-nav {
 	top:0vh;
 	z-index: -2;
 	animation: intro-colour 5s infinite, intro-rotate 5s infinite, intro-scale 5s infinite;
-}
-			@keyframes intro-colour {
+}*/
+			/*@keyframes intro-colour {
 				0% {background-color: red;}
 				20% {background-color: yellow;}
 				40% {background-color: green;}
 				60% {background-color: blue;}
 				80% {background-color: purple;}
 				100% {background-color: red;}
-			}
+			}*/
 			/*@keyframes intro-rotate {
 				100% {
 					transform: rotate(360deg);
 					transform-origin: top left;
 				}
 			}*/
-			@keyframes intro-scale {
+			/*@keyframes intro-scale {
 				50% {transform: scale(3);}
 			}
-
+*/
 
 
 
@@ -515,7 +517,7 @@ body#draw{
 #draw button{
 	position: fixed;
 	top: 75px;
-	left: 710px;
+	left: 560px;
 	z-index: 5;
 
 	border: 1px solid white;
