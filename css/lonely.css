@@ -197,6 +197,14 @@ input:checked~ul.sub-nav {
 	right:10px;
 	max-width: 15vw;
 }
+.credit{
+	position: absolute;
+	z-index: 5;
+	bottom: 20px;
+	left:55px;
+
+	font-size: 0.6em;
+}
 
 /*gallery page*/
 body#gallery, #intro{
