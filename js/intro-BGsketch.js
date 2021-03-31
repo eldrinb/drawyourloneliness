@@ -45,7 +45,7 @@ function draw() {
     stroke((random(1000)-(windowWidth/3)),(random(1000)-(windowHeight/3)),100);
     //size changing
     strokeWeight(random(3, 5));
-    bezier(random(0,windowWidth/2), height/2, random(0,width), random(0,height), random(0,width), random(0,height), random(windowWidth/2,windowWidth), height/2);
+    bezier(random(0,windowWidth/2), random(0,height), random(0,width), random(0,height), random(0,width), random(0,height), random(windowWidth/2,windowWidth), random(0,height));
   }
 }
 
