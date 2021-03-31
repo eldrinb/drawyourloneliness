@@ -341,7 +341,10 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
 .myImg {
   transition: 0.3s 1;
 }
-.myImg:hover {opacity: 0.7;transform:scale(1.1);}
+.myImg:hover {
+	opacity: 0.7;
+	transform:scale(1.1);
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -363,7 +366,7 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
   overflow: hidden;
   margin: auto;
   display: block;
-  max-height: 70%;
+  max-height: 60%;
   max-width: 70%;
 
 }
@@ -373,9 +376,9 @@ https://www.w3schools.com/howto/howto_css_modal_images.asp*/
   display: block;
   max-width: 70%;
   max-height: 50px;
-  font-size:0.8em;
+  font-size:1em;
   text-align: center;
-  color: #ccc;
+  color: white;
   padding: 10px 0;
   height: 100px;
 }
