@@ -19,15 +19,25 @@
 		<script src="js/intro-BGsketch.js"></script>
 		<!-- redirect -->
 		<script>
-			setTimeout(function(){
-            window.location.href = "pages/draw.html";
-         }, 5000);
+			if (window.matchMedia("(min-width: 500px)").matches) {
+				setTimeout(function(){
+	           	window.location.href = "pages/draw.html";
+	         	}, 5000);
+			} 
+			else {
+			}
 		</script>
 	</head>
 	<body id="intro">
 		<div class="intro">
-			<h1> Draw Your Loneliness</h1>
-			<a href="pages/draw.html">For the best experience, please proceed using a laptop / desktop.</a>
+			<h1>Draw Your Loneliness</h1>
+			<a href="pages/draw.html">For the best experience, please proceed only on desktop</a>
+		</div>
+		<div class="mobile">
+			<div class="intro-mobile">
+				<h1>Draw Your Loneliness</h1>
+				<p>For the best experience, please proceed only on desktop</p>
+			</div>
 		</div>
 	</body>
 </html>
