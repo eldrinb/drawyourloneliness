@@ -1,3 +1,4 @@
+@media screen and (min-width: 500px) {
 html, body{
 	font-family: 'Courier New', monospace;
 	font-style: normal;
@@ -507,4 +508,70 @@ body#draw{
 	height:100%;
 	width: 100%;
 	border:none;
+}
+/*hidden mobile settings*/
+.mobile {
+	display: none;
+}
+}
+@media screen and (max-width: 499px) {
+/*hidden mobile settings*/
+.mobile {
+	display: block;
+}
+.intro{
+	display: none !important;
+}
+/*mobile landing page*/
+.intro-mobile{
+  	position: relative;
+	margin: 0 !important;
+	top:10em;
+	text-align: center;
+
+  	color:rgb(150,150,150);
+}
+.intro-mobile h1{
+	font-size: 4em;
+	/*text-align: left !important;*/
+	color: black !important;
+	text-shadow:
+		-1px -1px 0 #FFF,
+		1px -1px 0 #FFF,
+		-1px 1px 0 #FFF,
+		1px 1px 0 #FFF;
+}
+.intro-mobile p {
+	padding:0 40px 0 40px; 
+	color: white;
+}
+html, body{
+	font-family: 'Courier New', monospace;
+	font-style: normal;
+	font-weight: 500;
+	/*background-color: black;*/
+	color: white;
+
+ 	margin:0px;
+	/*display: grid;*/
+  	/*align-items: center;*/
+  	/*grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+  	/*grid-template-columns: repeat(12, 1fr);
+  	grid-column-gap: 20px;
+  	grid-template-rows: repeat(2, 1fr);*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: termina,sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	text-shadow: 1px black;
+}
+
+a, h1, h2, p{
+	text-shadow: 1px 1px 2px black;
+}
+h3{
+	text-shadow: -1px -1px 2px black;
+}
 }
